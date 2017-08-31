@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C0DCE47-88ED-4A0C-A658-3AF0AD57D84D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LegacyApplication.ViewModels</RootNamespace>
+    <AssemblyName>LegacyApplication.ViewModels</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HumanResources\NationalityViewModel.cs" />
+    <Compile Include="HumanResources\TitleLevelViewModel.cs" />
+    <Compile Include="HumanResources\TitlePostViewModel.cs" />
+    <Compile Include="HumanResources\DepartmentViewModel.cs" />
+    <Compile Include="Core\RoleViewModel.cs" />
+    <Compile Include="Core\UserViewModel.cs" />
+    <Compile Include="Core\FileSimpleViewModel.cs" />
+    <Compile Include="Core\UploadedFileViewModel.cs" />
+    <Compile Include="HumanResources\EmployeeViewModel.cs" />
+    <Compile Include="HumanResources\AdministrativeLevelViewModel.cs" />
+    <Compile Include="HumanResources\JobPostLevelViewModel.cs" />
+    <Compile Include="HumanResources\AdministrativePostViewModel.cs" />
+    <Compile Include="HumanResources\JobPostViewModel.cs" />
+    <Compile Include="LightManage\GroupInfoViewModel.cs" />
+    <Compile Include="LightManage\GroupLightInfoTempViewModel.cs" />
+    <Compile Include="LightManage\GroupLightInfoViewModel.cs" />
+    <Compile Include="LightManage\LightAlarmViewModel.cs" />
+    <Compile Include="LightManage\LightSchDetailViewModel.cs" />
+    <Compile Include="LightManage\TempTimeSchDetailViewModel.cs" />
+    <Compile Include="LightManage\LightSchMainViewModel.cs" />
+    <Compile Include="LightManage\TempTimeSchMainViewModel.cs" />
+    <Compile Include="LightManage\TeleInfoViewModel.cs" />
+    <Compile Include="LightManage\LightInfoViewModel.cs" />
+    <Compile Include="LightManage\Temp\TempGroupLightInfoViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scrum\BugTaskViewModel.cs" />
+    <Compile Include="Scrum\BugViewModel.cs" />
+    <Compile Include="Scrum\FeatureViewModel.cs" />
+    <Compile Include="Scrum\ProductBacklogItemTaskViewModel.cs" />
+    <Compile Include="Scrum\ProductBacklogItemViewModel.cs" />
+    <Compile Include="Scrum\ProjectTeamMemberViewModel.cs" />
+    <Compile Include="Scrum\ProjectViewModel.cs" />
+    <Compile Include="Scrum\SprintViewModel.cs" />
+    <Compile Include="Work\InternalMailViewModel.cs" />
+    <Compile Include="Work\InternalMailAttachmentViewModel.cs" />
+    <Compile Include="Work\InternalMailToViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LegacyApplication.Shared\LegacyApplication.Shared.csproj">
+      <Project>{d8252922-85b7-4bf0-93cf-f777b7a8a0ea}</Project>
+      <Name>LegacyApplication.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
